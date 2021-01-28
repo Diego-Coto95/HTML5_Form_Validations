@@ -22,68 +22,68 @@
                     <h1>Payment for example</h1>
                 </div>
                 <div class="card-body">
-                    <form class="needs-validation" novalidate>
+                    <form class="needs-validation" onsubmit="validateFields()">
                         <!-- Primera Fila -->
                         <div class="row">
                             <div class="col-md-5 mb-3">
                                 <label for="validationCustom01">Card #</label>
-                                <input type="number" class="form-control" id="validationCustom01"
-                                    placeholder="################" value="" maxlength="16" required>
-                                <div class="valid-feedback">
+                                <input type="number" class="form-control" id="cardInput"
+                                    placeholder="################" value="" />
+                                <!-- <div class="valid-feedback" style="display: none;">
                                     Looks good!
-                                </div>
+                                </div> -->
                             </div>
                             <div class="col-md-3 mb-3">
                                 <label for="validationCustom02">CVC #</label>
-                                <input type="number" class="form-control" id="validationCustom02" placeholder="0000"
-                                    value="" maxlength="4" required>
-                                <div class="valid-feedback">
+                                <input type="number" class="form-control" id="cvcInput" placeholder="0000"
+                                    value="" />
+                                <!-- <div class="valid-feedback" style="display: none;">
                                     Looks good!
-                                </div>
+                                </div> -->
                             </div>
                             <div class="col-md-4 mb-3">
                                 <label for="validationCustom02">Amount</label>
                                 <div class="d-flex">
                                     <i class="fas fa-dollar-sign"></i>
-                                    <input type="number" class="form-control" id="validationCustom03"
-                                        placeholder="Amount" value="" required>
+                                    <input type="number" class="form-control" id="amountInput"
+                                        placeholder="Amount" value="" />
                                 </div>
-                                <div class="valid-feedback">
+                                <!-- <div class="valid-feedback" style="display: none;">
                                     Looks good!
-                                </div>
+                                </div> -->
                             </div>
                         </div>
                         <!-- Segunda Fila -->
                         <div class="row">
                             <div class="col-md-6 mb-3">
                                 <label for="validationCustom01">First name</label>
-                                <input type="text" class="form-control" id="validationCustom01" placeholder="First name"
-                                    value="" required>
-                                <div class="valid-feedback">
+                                <input type="text" class="form-control" id="nameInput" placeholder="First name"
+                                    value="" />
+                                <!-- <div class="valid-feedback" style="display: none;">
                                     Looks good!
-                                </div>
+                                </div> -->
                             </div>
                             <div class="col-md-6 mb-3">
                                 <label for="validationCustom02">Last name</label>
-                                <input type="text" class="form-control" id="validationCustom02" placeholder="Last name"
-                                    value="" required>
-                                <div class="valid-feedback">
+                                <input type="text" class="form-control" id="lastNameInput" placeholder="Last name"
+                                    value="" />
+                                <!-- <div class="valid-feedback" style="display: none;">
                                     Looks good!
-                                </div>
+                                </div> -->
                             </div>
                         </div>
                         <!-- Tercera Fila -->
                         <div class="row">
                             <div class="col-md-6 mb-3">
                                 <label for="validationCustom01">City</label>
-                                <input type="text" class="form-control" id="validationCustom01" value="" required>
-                                <div class="valid-feedback">
+                                <input type="text" class="form-control" id="cityInput" value="" />
+                                <!-- <div class="valid-feedback" style="display: none;">
                                     Looks good!
-                                </div>
+                                </div> -->
                             </div>
                             <div class="col-sm-3 pb-3">
                                 <label for="exampleSt">State</label> <select class="form-control custom-select"
-                                    id="exampleSt" required>
+                                    id="exampleSt" >
                                     <option class="text-white bg-warning">
                                         Pick a state
                                     </option>
@@ -232,18 +232,18 @@
                                         Wyoming
                                     </option>
                                 </select>
-                                <div class="valid-feedback">
+                                <!-- <div class="valid-feedback" style="display: none;">
                                     Looks good!
-                                </div>
+                                </div> -->
                             </div>
 
 
                             <div class="col-md-3 mb-3">
                                 <label for="validationCustom02">Postal Code</label>
-                                <input type="number" class="form-control" id="validationCustom03" value="" required>
-                                <div class="valid-feedback">
+                                <input type="number" class="form-control" id="postalCodeInput" value="" />
+                                <!-- <div class="valid-feedback" style="display: none;">
                                     Looks good!
-                                </div>
+                                </div> -->
                             </div>
                         </div>
                         <!-- Cuarta Fila -->
@@ -276,9 +276,9 @@
                                                 class="fab fa-cc-amex"></i></label>
                                     </div>
                                 </div>
-                                <div class="invalid-feedback">
+                                <!-- <div class="invalid-feedback" style="display: none;">
                                     Please provide a valid card.
-                                </div>
+                                </div> -->
                             </div>
                             <div class="col-md-6 mb-3">
                                 <label for="validationCustom05">Message</label>
@@ -287,9 +287,9 @@
                                         id="floatingTextarea2" style="height: 100px"></textarea>
                                     <label for="floatingTextarea2">Add any notes here.</label>
                                 </div>
-                                <div class="invalid-feedback">
+                                <!-- <div class="invalid-feedback">
                                     Please provide a valid zip.
-                                </div>
+                                </div> -->
                             </div>
                         </div>
                 </div>
@@ -329,7 +329,8 @@
         </div>
     </div>
     </div>
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+    <script type="text/JavaScript" src="script.js"></script>
+    <!-- <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
         integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
         crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
@@ -337,7 +338,7 @@
         crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
         integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
-        crossorigin="anonymous"></script>
+        crossorigin="anonymous"></script> -->
 </body>
 
 </html>
